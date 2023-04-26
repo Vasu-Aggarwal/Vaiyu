@@ -1,32 +1,22 @@
 package com.example.vaiyu
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Bitmap
-import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
-import android.util.Base64
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.example.vaiyu.apiCall.mLAPI
 import com.example.vaiyu.databinding.ActivityMainBinding
 import com.example.vaiyu.ml.AqiQualityModel
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.support.image.TensorImage
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
-import java.io.ByteArrayOutputStream
-import java.io.File
-import java.io.FileOutputStream
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var img: Bitmap
-    private lateinit var mlAPIObj: mLAPI
-    lateinit var uri: Uri
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -70,12 +60,13 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
         if (requestCode == 101){
             binding.img.setImageURI(data?.data)
-            uri = data?.data!!
+            val uri = data?.data!!
             img = MediaStore.Images.Media.getBitmap(this.contentResolver, uri)
         }
     }
