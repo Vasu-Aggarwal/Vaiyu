@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Vaiyu</string>
+    <string name="delhi_in">Delhi, In</string>
+    <string name="deg">℃</string>
 </resources>
