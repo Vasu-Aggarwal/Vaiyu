@@ -25,5 +25,12 @@
             <item name="android:windowLightStatusBar">
                 true
             </item>
+
         </style>
+
+    <style name="Theme.Vaiyu.SplashScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/vaiyu</item>
+        <item name="postSplashScreenTheme">@style/Theme.Vaiyu</item>
+    </style>
 </resources>

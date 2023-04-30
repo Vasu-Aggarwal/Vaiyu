@@ -18,4 +18,14 @@
     <color name="yellow">#D6730A</color>
     <color name="dark_violet">#413B4C</color>
     <color name="overlay_black">#26000000</color>
+    <color name="maroon">#800000</color>
+    <color name="thunderstorm">#1361FD</color>
+    <color name="drizzle">#526FA8</color>
+    <color name="rain">#0E8EFF</color>
+    <color name="snow">#987CFF</color>
+    <color name="atmosphere">#A8B4CC</color>
+    <color name="clear">#FF9D6F</color>
+    <color name="clouds">#454A4C</color>
+    <color name="vaiyu_low">#33aeb5</color>
+    <color name="vaiyu_above">#d6f0f1</color>
 </resources>
